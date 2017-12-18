@@ -33,7 +33,13 @@ public class CounterTest {
     @Test
     public void canOutputSting(){
         counter.setInput("Hello, and how are you today?");
-        assertEquals("The total word count of your input is 6", counter.outputString());
+        assertEquals("The total word count is 6", counter.outputString());
+    }
+
+    @Test
+    public void canCountOccurancesOfWords(){
+        counter.setInput("testing testing one one two three one");
+        counter.occurances();
     }
 
 }

@@ -29,7 +29,8 @@ public class WordCounter extends AppCompatActivity {
         String sentence = inputText.getText().toString();
         countMe.setInput(sentence);
         int response = countMe.countWords();
-        outputText.setText(countMe.outputString());
+        countMe.outputString();
+        outputText.setText(countMe.outputString() + ":\n" + countMe.occurances());
     }
 
 
