@@ -30,4 +30,10 @@ public class CounterTest {
         assertEquals(6, counter.countWords());
     }
 
+    @Test
+    public void canOutputSting(){
+        counter.setInput("Hello, and how are you today?");
+        assertEquals("The total word count of your input is 6", counter.outputString());
+    }
+
 }

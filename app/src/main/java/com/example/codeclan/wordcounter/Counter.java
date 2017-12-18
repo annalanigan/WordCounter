@@ -25,5 +25,9 @@ public class Counter {
         return returning.length;
     }
 
+    public String outputString() {
+            return "The total word count of your input is " + countWords();
+        }
+
 }
 
