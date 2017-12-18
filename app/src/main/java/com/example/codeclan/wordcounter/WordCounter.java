@@ -24,13 +24,13 @@ public class WordCounter extends AppCompatActivity {
         outputText = findViewById(R.id.output_text);
         countMe = new Counter();
     }
-//
-//    public void onSubmitButtonClicked(View button){
-//        String sentence = inputText.getText().toString();
-//        countMe.setInput(sentence);
-//        int response = countMe.countWords();
-//        outputText.setText();
-//    }
+
+    public void onSubmitButtonClicked(View button){
+        String sentence = inputText.getText().toString();
+        countMe.setInput(sentence);
+        int response = countMe.countWords();
+        outputText.setText(countMe.outputString());
+    }
 
 
 }
