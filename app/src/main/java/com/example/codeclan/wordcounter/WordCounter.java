@@ -11,6 +11,7 @@ public class WordCounter extends AppCompatActivity {
 
     Button submitButton;
     EditText inputText;
+    TextView totalCount;
     TextView outputText;
     Counter countMe;
 
@@ -21,6 +22,7 @@ public class WordCounter extends AppCompatActivity {
 
         submitButton = findViewById(R.id.submit_button);
         inputText = findViewById(R.id.input_text);
+        totalCount = findViewById(R.id.total_count);
         outputText = findViewById(R.id.output_text);
         countMe = new Counter();
     }
@@ -30,7 +32,8 @@ public class WordCounter extends AppCompatActivity {
         countMe.setInput(sentence);
         int response = countMe.countWords();
         countMe.outputString();
-        outputText.setText(countMe.outputString() + ":\n" + countMe.occurances());
+        totalCount.setText(countMe.outputString());
+        outputText.setText(countMe.occurances());
     }
 
 
