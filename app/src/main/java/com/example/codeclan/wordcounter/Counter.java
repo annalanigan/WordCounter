@@ -40,10 +40,10 @@ public class Counter {
             if (!sentence.containsKey(returning[i])) {
                 sentence.put(returning[i], 1);
             } else {
-                sentence.put(returning[i], (Integer) sentence.get(returning[i]) + 1);
+                sentence.put(returning[i], sentence.get(returning[i]) + 1);
             }
         } for (Object item : sentence.keySet()){
-            finalOutput += item + " " + (Integer) sentence.get(item) + "; ";
+            finalOutput += item + " " + sentence.get(item) + "; ";
         }
         return finalOutput;
     }
